@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+enum STATE{
+  ONE,
+  TWO,
+  THREE,
+  FOUR
+}
+
 class IntroPage extends StatefulWidget {
   @override
   _IntroPageState createState() => _IntroPageState();
 }
 
 class _IntroPageState extends State<IntroPage> {
+
+  STATE currentState = STATE.ONE;
+
   @override
   Widget build(BuildContext context) {
 
     ScreenUtil.init(context, designSize: Size(375, 812), allowFontScaling: true);
 
-    return Scaffold(
+    return currentState==STATE.ONE?Scaffold(
       backgroundColor: Colors.white,
       body: SizedBox(
         width: double.infinity,
@@ -51,7 +61,11 @@ class _IntroPageState extends State<IntroPage> {
                     color: Color(0xFF1AD5AD),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
                     child: Text("Get Started",style: TextStyle(color: Colors.white),),
-                    onPressed: (){},
+                    onPressed: (){
+                      setState(() {
+                        currentState=STATE.TWO;
+                      });
+                    },
                   ),
                 ),
               ),
@@ -70,6 +84,47 @@ class _IntroPageState extends State<IntroPage> {
           ],
         ),
       ),
-    );
+    ):
+    currentState==STATE.TWO?Scaffold(
+      backgroundColor: Color(0xFF1C162E),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("SET YOUR\nFINANCIAL GOALS"),
+          Text("Your Goals will help us formulate the right\nrecommendations for success"),
+          Container(
+            width: ScreenUtil().setWidth(136),
+            height: ScreenUtil().setHeight(56),
+            child: RaisedButton(
+              padding: const EdgeInsets.all(0.0),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
+              onPressed: (){},
+              child: Expanded(
+                child: Container(
+                  width: ScreenUtil().setWidth(136),
+                  height: ScreenUtil().setHeight(56),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(60),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Color(0xFF9D70FF),
+                        Color(0xFF7460FF),
+                      ],
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      Text("Next"),
+                      Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    ):Scaffold();
   }
 }
