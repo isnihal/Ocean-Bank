@@ -152,9 +152,65 @@ class _IntroPageState extends State<IntroPage> {
             SizedBox(height: ScreenUtil().setHeight(96),),
             Image.asset("assets/images/intro_three.png",height: ScreenUtil().setHeight(281),width: ScreenUtil().setWidth(168),),
             SizedBox(height: ScreenUtil().setHeight(56),),
-            Text("SET YOUR\nFINANCIAL GOALS",textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 16),),
+            Text("MANAGE YOUR\nFINANCES",textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 16),),
             SizedBox(height: ScreenUtil().setHeight(30),),
             Text("We help our users to make the right\nfinancial decisions",textAlign: TextAlign.center,style: TextStyle(color: Color(0xFF707070),fontSize: 14),),
+            SizedBox(height: ScreenUtil().setHeight(82),),
+            Container(
+              width: ScreenUtil().setWidth(136),
+              height: ScreenUtil().setHeight(56),
+              child: RaisedButton(
+                padding: const EdgeInsets.all(0.0),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
+                onPressed: (){
+                  setState(() {
+                    currentState=STATE.FOUR;
+                  });
+                },
+                child: Expanded(
+                  child: Container(
+                    width: ScreenUtil().setWidth(136),
+                    height: ScreenUtil().setHeight(56),
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(60),
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xFF9D70FF),
+                          Color(0xFF7460FF),
+                        ],
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(),
+                        Text("Next",style: TextStyle(color: Colors.white),),
+                        Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    ):
+    currentState==STATE.FOUR?Scaffold(
+      backgroundColor: Color(0xFF1C162E),
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: ScreenUtil().setHeight(96),),
+            Image.asset("assets/images/intro_four.png",height: ScreenUtil().setHeight(281),width: ScreenUtil().setWidth(168),),
+            SizedBox(height: ScreenUtil().setHeight(56),),
+            Text("ACHIEVE FINANCIAL\nINDEPENDENCE",textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 16),),
+            SizedBox(height: ScreenUtil().setHeight(30),),
+            Text("Track your progress and achievements",textAlign: TextAlign.center,style: TextStyle(color: Color(0xFF707070),fontSize: 14),),
             SizedBox(height: ScreenUtil().setHeight(82),),
             Container(
               width: ScreenUtil().setWidth(136),
