@@ -111,28 +111,26 @@ class _IntroPageState extends State<IntroPage> {
                     currentState = STATE.THREE;
                   });
                 },
-                child: Expanded(
-                  child: Container(
-                    width: ScreenUtil().setWidth(136),
-                    height: ScreenUtil().setHeight(56),
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(60),
-                      gradient: LinearGradient(
-                        colors: <Color>[
-                          Color(0xFF9D70FF),
-                          Color(0xFF7460FF),
-                        ],
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(),
-                        Text("Next",style: TextStyle(color: Colors.white),),
-                        Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                child: Container(
+                  width: ScreenUtil().setWidth(136),
+                  height: ScreenUtil().setHeight(56),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(60),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Color(0xFF9D70FF),
+                        Color(0xFF7460FF),
                       ],
                     ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(),
+                      Text("Next",style: TextStyle(color: Colors.white),),
+                      Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                    ],
                   ),
                 ),
               ),
@@ -167,28 +165,26 @@ class _IntroPageState extends State<IntroPage> {
                     currentState=STATE.FOUR;
                   });
                 },
-                child: Expanded(
-                  child: Container(
-                    width: ScreenUtil().setWidth(136),
-                    height: ScreenUtil().setHeight(56),
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(60),
-                      gradient: LinearGradient(
-                        colors: <Color>[
-                          Color(0xFF9D70FF),
-                          Color(0xFF7460FF),
-                        ],
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(),
-                        Text("Next",style: TextStyle(color: Colors.white),),
-                        Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                child: Container(
+                  width: ScreenUtil().setWidth(136),
+                  height: ScreenUtil().setHeight(56),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(60),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Color(0xFF9D70FF),
+                        Color(0xFF7460FF),
                       ],
                     ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(),
+                      Text("Next",style: TextStyle(color: Colors.white),),
+                      Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                    ],
                   ),
                 ),
               ),
@@ -219,28 +215,26 @@ class _IntroPageState extends State<IntroPage> {
                 padding: const EdgeInsets.all(0.0),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
                 onPressed: (){},
-                child: Expanded(
-                  child: Container(
-                    width: ScreenUtil().setWidth(136),
-                    height: ScreenUtil().setHeight(56),
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(60),
-                      gradient: LinearGradient(
-                        colors: <Color>[
-                          Color(0xFF9D70FF),
-                          Color(0xFF7460FF),
-                        ],
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(),
-                        Text("Next",style: TextStyle(color: Colors.white),),
-                        Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                child: Container(
+                  width: ScreenUtil().setWidth(136),
+                  height: ScreenUtil().setHeight(56),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(60),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Color(0xFF9D70FF),
+                        Color(0xFF7460FF),
                       ],
                     ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(),
+                      Text("Next",style: TextStyle(color: Colors.white),),
+                      Icon(Icons.arrow_right_alt_outlined,color: Colors.white,)
+                    ],
                   ),
                 ),
               ),
