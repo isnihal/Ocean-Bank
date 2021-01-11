@@ -22,6 +22,7 @@ class _SendMoneyState extends State<SendMoney> {
               left: ScreenUtil().setWidth(18)
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
                   icon: Icon(Icons.arrow_back_rounded),
@@ -35,7 +36,114 @@ class _SendMoneyState extends State<SendMoney> {
             ),
             width: double.infinity,
           ),
-          Expanded(child: Container()),
+          Container(
+            height: ScreenUtil().setHeight(482),
+            width: double.infinity,
+            margin: EdgeInsets.only(
+              left: ScreenUtil().setWidth(9),
+              top: ScreenUtil().setHeight(64),
+              bottom: ScreenUtil().setHeight(64)
+            ),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF1C162E),
+                        boxShadow: [BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 1.0,
+                        ),]
+                    ),
+                    height: ScreenUtil().setHeight(482),
+                    width: ScreenUtil().setWidth(112),
+                  ),
+                ),
+                SizedBox(width: ScreenUtil().setWidth(24),),
+                Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Container(
+                        width: ScreenUtil().setWidth(198),
+                        height: ScreenUtil().setHeight(100),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 1.0,
+                            ),]
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: ScreenUtil().setHeight(28),
+                            left: ScreenUtil().setWidth(16)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Send",style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.w500),),
+                              SizedBox(height: ScreenUtil().setHeight(8),),
+                              Row(
+                                children: [
+                                  Text("999",style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600,color: Color(0xFFE8D73F)),),
+                                  Text(".00",style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600,color: Color(0xFFE0E0E0)))
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: ScreenUtil().setHeight(18),),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Container(
+                        width: ScreenUtil().setWidth(198),
+                        height: ScreenUtil().setHeight(276),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 1.0,
+                            ),]
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                              top: ScreenUtil().setHeight(28),
+                              left: ScreenUtil().setWidth(16)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("You have transferred the most amount of money to Glenn Philips, a total of \$888",style: TextStyle(color: Colors.black87,height: ScreenUtil().setHeight(2),fontSize: 16,fontWeight: FontWeight.w600),)
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: ScreenUtil().setHeight(18),),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Container(
+                        width: ScreenUtil().setWidth(192),
+                        height: ScreenUtil().setHeight(70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                            boxShadow: [BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 1.0,
+                            ),]
+                        ),
+                      ),
+                    ),
+
+                  ],
+                )
+              ],
+            ),
+          ),
           RaisedButton(
             padding: const EdgeInsets.all(0.0),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
@@ -60,7 +168,6 @@ class _SendMoneyState extends State<SendMoney> {
               child: Center(child: Text("Confirm",style: TextStyle(color: Colors.white),)),
             ),
           ),
-          SizedBox(height: ScreenUtil().setHeight(66),)
         ],
       ),
     );
