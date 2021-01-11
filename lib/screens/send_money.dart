@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+enum TRANSFER_METHOD{
+  QUICK_TRANSFER,
+  NORMAL
+}
+
 class SendMoney extends StatefulWidget {
   @override
   _SendMoneyState createState() => _SendMoneyState();
 }
 
 class _SendMoneyState extends State<SendMoney> {
+
+  TRANSFER_METHOD currentTransferMethod = TRANSFER_METHOD.QUICK_TRANSFER;
+
   @override
   Widget build(BuildContext context) {
 
@@ -124,20 +132,73 @@ class _SendMoneyState extends State<SendMoney> {
                       ),
                     ),
                     SizedBox(height: ScreenUtil().setHeight(18),),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Container(
-                        width: ScreenUtil().setWidth(192),
-                        height: ScreenUtil().setHeight(70),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                            boxShadow: [BoxShadow(
-                              color: Colors.black,
-                              blurRadius: 1.0,
-                            ),]
+                    Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: currentTransferMethod!=TRANSFER_METHOD.QUICK_TRANSFER? Container(
+                            width: ScreenUtil().setWidth(92),
+                            height: ScreenUtil().setHeight(70),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(
+                                  color: Colors.black,
+                                  blurRadius: 1.0,
+                                ),]
+                            ),
+                          ):
+                          Container(
+                            width: ScreenUtil().setWidth(92),
+                            height: ScreenUtil().setHeight(70),
+                            child: RaisedButton(
+                              color: Colors.white,
+                              onPressed: (){},
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                    top: ScreenUtil().setHeight(18),
+
+                                ),
+                                child: Text("Quick Transfer"),
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
+                        SizedBox(width: ScreenUtil().setWidth(14),),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: currentTransferMethod==TRANSFER_METHOD.NORMAL?Container(
+                            width: ScreenUtil().setWidth(92),
+                            height: ScreenUtil().setHeight(70),
+                            child: RaisedButton(
+                              color: Colors.white,
+                              onPressed: (){},
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  top: ScreenUtil().setHeight(18),
+                                  left: 0
+                                ),
+                                child: Text("Normal"),
+                              ),
+                            ),
+                          ):
+                          Container(
+                            width: ScreenUtil().setWidth(92),
+                            height: ScreenUtil().setHeight(70),
+                            child: RaisedButton(
+                              color: Colors.white,
+                              onPressed: (){},
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  top: ScreenUtil().setHeight(18),
+                                    left: 0
+                                ),
+                                child: Text("Normal"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
 
                   ],
                 )
