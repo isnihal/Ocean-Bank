@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocean_bank/screens/intro_page.dart';
+import 'package:ocean_bank/screens/send_money.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ocean',
       theme: ThemeData(
+        backgroundColor: Colors.white,
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: IntroPage(),
+      home: SendMoney(),
     );
   }
 }
